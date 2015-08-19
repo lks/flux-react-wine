@@ -31,7 +31,6 @@ var WineStore = assign({}, EventEmitter.prototype, {
 });
 
 Dispatcher.register(function(payload) {
-
   switch(payload.action.actionType) {
     case WineActionConstants.LIST_WINES:
       wines = payload.action.wines;

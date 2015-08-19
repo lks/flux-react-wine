@@ -10,5 +10,4 @@ var FirebaseUtils = {
     return list;
   }
 };
-
 module.exports = FirebaseUtils;

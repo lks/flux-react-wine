@@ -20,7 +20,7 @@ module.exports = {
   createWine: function(wine) {
     Api
       .addWineData(wine)
-      .then(function (wine) {
+      .then(function () {
         AppDispatcher.handleViewAction({
           actionType: WineActionConstants.ADD_WINE,
           wine: wine
@@ -28,8 +28,8 @@ module.exports = {
       })
       .catch(function () {
         AppDispatcher.handleViewAction({
-          actionType: ActionConstants.ERROR_RECEIVE,
-          error: 'There was a problem getting the categories'
+          actionType: WineActionConstants.ERROR_ADD_WINE_RECEIVE,
+          error: 'There was a problem getting the wines'
         })
       });
   },
@@ -50,7 +50,7 @@ module.exports = {
       .catch(function () {
         AppDispatcher.handleViewAction({
           actionType: ActionConstants.ERROR_RECEIVE,
-          error: 'There was a problem getting the categories'
+          error: 'There was a problem getting the wines'
         })
       });
   }

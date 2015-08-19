@@ -9,7 +9,6 @@ var Api = {
         .get("https://wineiscool.firebaseio.com/wines.json")
         .set('Content-Type', 'application/json')
         .end(function (res) {
-
           if (res.status === 404) {
             reject();
           } else {
@@ -29,7 +28,7 @@ var Api = {
           if (res.status === 404) {
             reject();
           } else {
-            resolve(wine);
+            resolve(res.body);
           }
         });
     });

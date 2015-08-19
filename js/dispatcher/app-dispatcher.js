@@ -17,6 +17,7 @@ var Dispatcher = assign(new Flux.Dispatcher(), {
     var payload = {
       action: action
     };
+    console.log(action);
     this.dispatch(payload);
   }
 
