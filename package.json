@@ -13,6 +13,7 @@
     "superagent": "^0.21.0"
   },
   "devDependencies": {
+    "jest-cli": "^0.4.*",
     "jsx-loader": "^0.12.2",
     "reactify": "^0.15.2",
     "webpack": "^1.5.3"
@@ -22,6 +23,7 @@
     "start-node": "npm run webpack & npm run serve-node",
     "webpack": "webpack -w",
     "serve": "cd dist && python -m SimpleHTTPServer",
-    "serve-node": "node ./node_modules/node-http-server/server/http.js root=./dist port=8888 launch=now"
+    "serve-node": "node ./node_modules/node-http-server/server/http.js root=./dist port=8888 launch=now",
+    "test": "jest"
   }
 }
